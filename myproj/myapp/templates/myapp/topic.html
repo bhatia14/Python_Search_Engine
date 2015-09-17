@@ -1,0 +1,26 @@
+
+{% extends 'myapp/base.html' %}
+ {% block body_block %}
+	<h2>List of Available Courses</h2>
+    {% if topiclist %}
+     <table style="width:100%;text-align:center;" border="1">
+  	<tr>
+    <th>Topic Name</th>
+    <th>Topic ID </th>		
+    
+  </tr>
+	{% for topicval in topiclist %}
+  <tr>
+
+    <td><font size="5"><a href="{% url 'myapp:topicdetail' topicval.id %}">{{ topicval.subject }}</a></font></td>
+    <td><font size="5">{{ topicval.id }}</font></td>		
+    
+  </tr>
+  {% endfor %}
+    </table>
+   
+    {% else %}
+        <strong>There are no available courses!</strong>
+    {% endif %}
+    <a href="/myapp/addtopic">Click to add more topics</a>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'myapp/base.html' %}
+ {% block body_block %}
+	<h2>Register Here</h2>
+	 {% if message == "" %}
+	 <div class="background">
+<div class="transbox">
+    <form action="" method="post">
+    	{% csrf_token %}
+    	{{ form }}
+    	<input type="submit" value="Register"> 
+
+    </form>
+     {% else %}
+     {{message}}
+     <a href = "{% url 'myapp:user_login' %}">Click here to go to Login page</a>
+     <br/><br/><br/><br/><br/>
+      {% endif %}
+{% endblock %}

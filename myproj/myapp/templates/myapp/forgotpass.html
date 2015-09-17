@@ -1,0 +1,20 @@
+{% extends 'myapp/base.html' %}
+ {% block body_block %}
+	<h2>Forgot Password</h2>
+	 {% if message == "" %}
+	 <div class="transbox">
+	 <div class='login'>
+    <form action="" method="post">
+    	{% csrf_token %}
+    	Email:
+    	{{ form }}<br/><br/>
+    			<input type="submit" value="OK"> 
+
+    </form>
+    </div>
+			</div>
+     {% else %}
+     <p>{{message}}</p>
+      {% endif %}
+      <br/><br/><br/>
+{% endblock %}

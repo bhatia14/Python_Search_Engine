@@ -1,0 +1,29 @@
+
+{% extends 'myapp/base.html' %}
+ {% block body_block %}
+ <div class="transbox">
+	<h2>List of Available Courses</h2>
+    {% if topiclist %}
+    <ul>
+        {% for topicval in topiclist %}
+        
+            <li>{{ topicval.subject }} {{ topicval.time }} </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+        <strong>There are no available courses!</strong>
+    {% endif %}
+    
+   
+    
+    <form action="/myapp/addtopic" method="post">
+    	{% csrf_token %}
+    	{{ form }}
+    	<br/><br/>
+    			<input type="submit" value="Add Topic"> 
+
+    </form>
+    
+    
+    </div>
+{% endblock %}

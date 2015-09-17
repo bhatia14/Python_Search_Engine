@@ -1,0 +1,219 @@
+
+body {
+  margin: 0;
+  color:#435160;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+div.background {
+    background: url(https://secure.static.tumblr.com/6c5fa07b12f8f05dd1360aa561b7a100/qqemjaf/yy7n7n5lb/tumblr_static_sky2_desk_photodoom.jpg);
+    background-repeat: repeat-y;
+    background-size: 100%;
+	padding:100px;
+}
+
+div.transbox {
+    margin: 5px;
+    background-color: #ffffff;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    padding:30px;
+    height: 100%;
+
+}
+
+.ull {
+	
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+}
+.lis {
+	float: right;
+}
+
+.image{
+  width: 1000px;
+  height: 120px;
+}
+
+a:link, a:visited {
+    
+    width: 150px;
+    font-weight: bold;
+    color: #ffffff;
+    
+    text-align: center;
+    padding: 4px;
+    text-decoration: underline;
+    list-style:none;
+    border: 1px  #ccc;
+}
+
+.logout{
+	align:right;
+	text-align: right;
+	float: right;
+}
+
+.tt {
+    margin: 5%;
+    font-weight: bold;
+    color: #006400;
+}
+img {
+  width: 100px;
+  max-width: 100%;
+  height: 120px;
+  margin:10px;
+  float: right;
+}
+
+.container{
+width:90%;
+margin-left:auto;
+margin-right:auto;
+background-size: 100%;
+}
+
+h1{
+	text-transform: uppercase;
+	color: #ffffff;
+}
+
+h2 {
+  color: #000000;
+  font-family: "Times New Roman", serif;
+  
+  font-weight: bold;
+  font-size: 2.0em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+p {
+  color: #000000;
+  font-family: "Times New Roman", serif;
+  
+  font-size: 1.4em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+a {
+  color: #435160;
+  text-decoration: none;
+}
+
+.login {
+margin-left: auto;
+margin-right: auto;
+width: 350px;
+}
+
+input[type="text"], input[type="password"] {
+  width: 250px;
+  padding: 10px 0px;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #435160;
+  outline: none;
+  color: #6D7781;
+  font-size: 16px;
+}
+input[type=checkbox] {
+  display: block;
+}
+
+
+label {
+  display: table-row;
+  
+  margin-right: 10px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: transparent;
+  content: "";
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  border: 3px solid #435160;
+}
+
+#agree:checked ~ label[for=agree] {
+  background: #435160;
+}
+
+input[type="submit"] {
+  background: #1FCE6D;
+  border: 0;
+  width: 350px;
+  height: 40px;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+input[type="submit"]:hover {
+  background: #16aa56;
+  animation-name: shake;
+}
+
+input[type="login"]:hover {
+    background: #16aa16;
+    animation-name: shake;
+}
+
+.forgot {
+  margin-top: 30px;
+  display: block;
+  font-size: 11px;
+  text-align: center;
+  font-weight: bold;
+}
+.forgot:hover {
+  margin-top: 30px;
+  display: block;
+  font-size: 11px;
+  text-align: center;
+  font-weight: bold;
+  color: #6D7781;
+}
+
+.agree {
+  padding: 30px 0px;
+  font-size: 12px;
+  text-indent: 25px;
+  line-height: 15px;
+}
+
+::-webkit-input-placeholder {
+  color: #435160;
+  font-size: 12px;
+}
+
+.animated {
+  animation-fill-mode: both;
+  animation-duration: 1s;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}

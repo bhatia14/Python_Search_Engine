@@ -1,0 +1,21 @@
+    {% extends 'myapp/base.html' %}
+
+{% block body_block %}
+<body>
+<h2><u>My Course Detail</u></h2>
+{% if stu %}
+	{% if courselist %}
+		{% for course in courselist %}
+			<p><strong>Course Number: {{course.course_no}} </strong></p>
+				<p><strong>Course Name: {{course.title}}</strong></p>
+		{% endfor %}
+		{% else %}
+		<p><strong>You are not assign to any course!!</strong></p>
+		{% endif %}
+	{% else %}
+        <p><strong>{{message}}</strong></p>
+    {% endif %}
+    <br></br><br></br>
+</body>
+{% endblock %}
+    

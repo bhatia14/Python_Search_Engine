@@ -1,0 +1,29 @@
+
+{% extends 'myapp/base.html' %}
+ {% block body_block %}
+	<h2>Topic Detail</h2>
+	
+	<div class="transbox">
+    {% if topicval %}
+    <ul>
+        
+            <li> Subject name: {{ topicval.subject }} </li>
+             {% if topicval.intro_course %} 
+            <li>	Intro_course:		yes </li>
+            {% endif %}
+            <li>Number of response: {{ topicval.num_responses }}</li>
+            <li>Avg Age: {{ topicval.avg_age }} </li>
+       
+    </ul>
+    {% else %}
+        <strong>There are no available courses!</strong>
+    {% endif %}
+    <form action="" method="post">
+    	{% csrf_token %}
+    	{{ form }}
+    	<br/><br/>
+    			<input type="submit" value="OK"> 
+
+    </form>
+     </div>
+{% endblock %}

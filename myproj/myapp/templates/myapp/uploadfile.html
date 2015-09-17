@@ -1,0 +1,15 @@
+{% extends 'myapp/base.html' %}
+ {% block body_block %}
+	<h2>Upload Image</h2>
+	 {% if message == "" %}
+	 
+    <form action="" method="post">
+    	{% csrf_token %}
+    	{{ form }}
+    			<input type="submit" value="OK"> 
+
+    </form>
+     {% else %}
+     {{message}}
+      {% endif %}
+{% endblock %}

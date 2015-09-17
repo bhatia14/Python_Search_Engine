@@ -1,0 +1,19 @@
+ {% extends 'myapp/base.html' %}
+
+{% block body_block %}
+<body>
+<h2><u>Course Detail</u></h2>
+{% if courseval %}
+    
+           	<p> <strong>Course Title:</strong> {{ courseval.title }}</p>
+           	<p> <strong>Course no:</strong> {{courseval.course_no}}</p>
+           	 
+           	 <p><strong>TextBook:</strong> {{courseval.textbook.title}} </p>     
+    	
+    {% else %}
+        <p><strong>There are no available courses!</strong></p>
+    {% endif %}
+<a href="/myapp/">Index Page Dynamic</a>
+	{{v}}
+</body>
+{% endblock %}
